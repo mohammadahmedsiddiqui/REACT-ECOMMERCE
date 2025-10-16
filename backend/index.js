@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors")
 const { connectdb } = require("./config/db");
 const { productschema } = require("./modal/product");
-
+const path = require("path")
 
 require("dotenv").config();
 
@@ -16,7 +16,9 @@ app.use(cors())
 // env variables
 const port = process.env.port || 6969;
 
-
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
 
 
 

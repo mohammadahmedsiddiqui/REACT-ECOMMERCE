@@ -17,12 +17,6 @@ app.use(cors())
 const port = process.env.port || 6969;
 
 
-app.use(express.static(path.join(__dirname, "frontend", "dist")));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-});
-
 
 
 app.post( "/addproduct" ,  async (req, res) => {

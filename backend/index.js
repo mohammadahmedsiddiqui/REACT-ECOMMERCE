@@ -17,9 +17,7 @@ app.use(cors())
 const port = process.env.port || 6969;
 
 
-app.get('/' ,(req,res)=>{
-res.send("hello products")
-})
+
 
 
 app.post( "/addproduct" ,  async (req, res) => {
